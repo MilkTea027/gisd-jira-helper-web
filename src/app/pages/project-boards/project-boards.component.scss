@@ -1,0 +1,16 @@
+.project-boards-container {
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    padding: 1rem;
+
+    .dropdown-container {
+        width: max-content;
+        
+        label {
+            margin-right: 1rem;
+            font-weight: bold;
+        }
+    }
+}

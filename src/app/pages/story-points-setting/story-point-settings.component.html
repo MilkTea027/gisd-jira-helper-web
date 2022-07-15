@@ -1,0 +1,71 @@
+<div class="story-point-settings-container">
+    <div class="accordion-title" (click)="toggle()">
+        <label>Story Point Settings</label>
+        <div class="accordion-icon-container">
+            <i class="fa fa-angle-down" *ngIf="!!collapsed"></i>
+            <i class="fa fa-angle-up" *ngIf="!collapsed"></i>
+        </div>
+    </div>
+
+    <form [formGroup]="storyPointForm" class="accordion-details" [ngClass]="{'accordion-hide' : !!collapsed}">
+        <div class="grid-container">
+            <div class="headers">
+                <label>Story Points</label>
+                <label>Max Day Duration</label>
+            </div>
+            <div class="rows">
+                <label>1</label>
+                <input type="number"
+                       min="0.5"
+                       max="10"
+                       step="0.5"
+                       (keypress)="numbersOnlyKeyPress($event)"
+                       formControlName="storyPointOne" >
+            </div>
+            <div class="rows">
+                <label>2</label>
+                <input type="number"
+                       min="0.5"
+                       max="10"
+                       step="0.5"
+                       (keypress)="numbersOnlyKeyPress($event)"
+                       formControlName="storyPointTwo" >
+            </div>
+            <div class="rows">
+                <label>3</label>
+                <input type="number"
+                       min="0.5"
+                       max="10"
+                       step="0.5"
+                       (keypress)="numbersOnlyKeyPress($event)"
+                       formControlName="storyPointThree" >
+            </div>
+            <div class="rows">
+                <label>4</label>
+                <input type="number"
+                       min="0.5"
+                       max="10"
+                       step="0.5"
+                       (keypress)="numbersOnlyKeyPress($event)"
+                       formControlName="storyPointFive" >
+            </div>
+            <div class="rows">
+                <label>5</label>
+                <input type="number"
+                       min="0.5"
+                       max="10"
+                       step="0.5"
+                       (keypress)="numbersOnlyKeyPress($event)"
+                       formControlName="storyPointEight" >
+            </div>
+        </div>
+
+        <div class="button-container">
+            <button type="submit"
+                    [disabled]="!!storyPointForm.invalid"
+                    (click)="submit()">
+                Apply Changes
+            </button>
+        </div>
+    </form>
+</div>

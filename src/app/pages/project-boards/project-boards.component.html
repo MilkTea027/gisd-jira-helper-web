@@ -1,0 +1,16 @@
+<div class="project-boards-container">
+    <div class="dropdown-container">
+        <label>Projects:</label>
+        <select (change)="changeProject($event)" *ngIf="!!projects">
+            <option disabled>Select Project</option>
+            <option *ngFor="let project of projects">{{project?.name}}</option>
+        </select>
+    </div>
+    <div class="dropdown-container">
+        <label>Boards:</label>
+        <select (change)="changeBoard($event)" *ngIf="!!boards">
+            <option disabled>Select Board</option>
+            <option *ngFor="let board of boards">{{board?.name}}</option>
+        </select>
+    </div>
+</div>

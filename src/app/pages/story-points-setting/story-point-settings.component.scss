@@ -1,0 +1,38 @@
+.story-point-settings-container {
+    height: 100%;
+
+    .accordion-details {
+        .grid-container {
+            width: 25rem;
+            margin-top: 0.5rem;
+
+            div.headers {
+                display: grid;
+                grid-template-columns: 50% 50%;
+
+                label {
+                    padding: 0.25rem 1rem;
+                    font-weight: bold;
+                    text-align: center;
+                    padding: 0.5rem 1rem;
+                }
+            }
+
+            div.rows {
+                display: grid;
+                grid-template-columns: 50% 50%;
+
+                label {
+                    text-align: center;
+                    font-weight: bold;
+                    padding: 0.25rem;
+                }
+
+                input {
+                   width: fit-content;
+                   margin: auto;
+                }
+            }
+        }
+    }
+}

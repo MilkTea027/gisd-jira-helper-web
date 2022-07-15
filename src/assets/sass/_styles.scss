@@ -1,0 +1,25 @@
+//========================== [ IMPORTS HERE ] ==========================
+
+// = INTERNAL ======
+@import './accordion';
+@import './buttons';
+@import './scrollbar';
+@import './spaces';
+@import './textboxes';
+@import './toasty';
+@import './typography';
+
+// = EXTERNAL ======
+@import '../../../node_modules/ngx-toastr/toastr.css';
+@import '../../../node_modules/font-awesome/css/font-awesome.min.css';
+
+//======================================================================
+
+body, html {
+    height: 100% !important;
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+.hidden {
+    display: none !important;
+}

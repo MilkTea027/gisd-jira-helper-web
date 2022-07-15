@@ -1,0 +1,41 @@
+<div class="page-layout-container" id="top-page">
+    <div class="top-menu-container">
+        <label class="title-label">
+            <i class="fa fa-users"></i>
+            GISD Jira Helper
+        </label>
+
+        <div class="projects-boards-dropdown-container">
+            <app-project-boards></app-project-boards>
+        </div>
+        
+        <div class="accordion-container">
+            <app-story-point-settings></app-story-point-settings>
+        </div>
+        
+        <div class="accordion-container mt0-5">
+            <app-resources-capacity></app-resources-capacity>
+        </div>
+    </div>
+
+    <div class="page-container" [ngClass]="{'page-container-side-collapsed': !!boardResourcesCollapsed}">
+        <div class="burndown-container">
+            <app-burndown></app-burndown>
+        </div>
+        <div class="board-resources-container">
+            <i class="fa fa-angle-right"
+               (click)="boardResourcesToggle()"
+               *ngIf="!boardResourcesCollapsed"></i>
+            <i class="fa fa-angle-left"
+               (click)="boardResourcesToggle()"
+               *ngIf="!!boardResourcesCollapsed"></i>
+            <app-board-resources></app-board-resources>
+        </div>
+    </div>
+
+    <div class="footer-container">
+        <label>
+            Copyright © {{currentYear}} GISD Maintenance. All rights reserved.
+        </label>
+    </div>
+</div>
